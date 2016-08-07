@@ -30,7 +30,6 @@ class AssetTracker {
     *preNMEA(void);
   String
     readLatLon(void);
-    readUbiLatLon(void);
  private:
 
 };

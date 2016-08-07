@@ -38,6 +38,12 @@ String AssetTracker::readLatLon(){
     return latLon;
 }
 
+String AssetTracker::readUbiLatLon(){
+    String ubilatLon = String::format("lat=%f,lng=%f",gps.latitudeDegrees,gps.longitudeDegrees);
+    return ubilatLon;
+}
+
+
 void AssetTracker::gpsOn(){
     // Power to the GPS is controlled by a FET connected to D6
     pinMode(D6,OUTPUT);

@@ -26,21 +26,16 @@ void AssetTracker::begin(){
 }
 
 float AssetTracker::readLat(){
-    return gps.latitude;
+    return gps.latitudeDegrees;
 }
 
 float AssetTracker::readLon(){
-    return gps.longitude;
+    return gps.longitudeDegrees;
 }
 
 String AssetTracker::readLatLon(){
     String latLon = String::format("%f,%f",gps.latitudeDegrees,gps.longitudeDegrees);
     return latLon;
-}
-
-String AssetTracker::readUbiLatLon(){
-    String ubilatLon = String::format("lat=%f,lng=%f",gps.latitudeDegrees,gps.longitudeDegrees);
-    return ubilatLon;
 }
 
 
